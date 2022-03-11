@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/BaseProject.API/bin/Debug/net5.0
+/BaseProject.API/obj
+
+/BaseProject.Application/bin/Debug/net5.0
+/BaseProject.Application/obj
+
+/BaseProject.Model/bin/Debug/net5.0
+/BaseProject.Model/obj
+
+/BaseProject.Repository.Cache/bin/Debug/net5.0
+/BaseProject.Repository.Cache/obj
