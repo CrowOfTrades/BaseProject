@@ -22,19 +22,20 @@ namespace BaseProject.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateOne(string name, decimal price, int quantity)
+        public async Task<IActionResult> Post(string name, decimal price, int quantity)
         {
             return Ok(await _productService.CreateOne(name, price, quantity));
         }
 
+
         [HttpPut]
-        public async Task<IActionResult> UpdateOne(Guid id, string name, decimal price)
+        public async Task<IActionResult> Put(Guid id, string name, decimal price)
         {
             return Ok(await _productService.UpdateOne(id, name, price));
         }
 
         [HttpPatch]
-        public async Task<IActionResult> EditQuantity(Guid id, int quantity)
+        public async Task<IActionResult> Patch(Guid id, int quantity)
         {
             return Ok(await _productService.UpdateQuantity(id, quantity));
         }
@@ -43,6 +44,18 @@ namespace BaseProject.API.Controllers
         public async Task<IActionResult> DeleteOne(Guid id)
         {
             return Ok(await _productService.DeleteOne(id));
+        }
+
+        [HttpHead]
+        public IActionResult Head()
+        {
+            return Ok();
+        }
+
+        [HttpOptions]
+        public IActionResult Options()
+        {
+            return Ok();
         }
     }
 }

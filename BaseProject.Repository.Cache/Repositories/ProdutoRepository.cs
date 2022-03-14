@@ -7,9 +7,9 @@ using System.Linq;
 
 namespace BaseProject.Repository.Cache
 {
-    public class ProdutoRepository : BaseRepository<Product>, IProdutoRepository
+    public class ProdutoRepository : BaseRepositoryJson<Product>, IProdutoRepository
     {
-        public ProdutoRepository(IMemoryCache cache) : base(cache)
+        public ProdutoRepository() : base()
         {
             CACHE_KEY = Product.KeyName;
         }

@@ -5,12 +5,12 @@ using System.Linq;
 
 namespace BaseProject.Repository.Cache
 {
-    public abstract class BaseRepository<T> where T : BaseEntity
+    public abstract class BaseRepositoryCache<T> where T : BaseEntity
     {
         internal readonly IMemoryCache _cache;
         internal string CACHE_KEY;
 
-        public BaseRepository(IMemoryCache cache)
+        public BaseRepositoryCache(IMemoryCache cache)
         {
             _cache = cache;
         }

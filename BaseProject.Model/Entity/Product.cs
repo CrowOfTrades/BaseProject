@@ -6,7 +6,6 @@ namespace BaseProject.Model
     {
         public Product()
         {
-            TABLE_NAME = "PRODUCT";
         }
 
         public string Name { get; set; }

@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Web.Middlewares;
 
 namespace BaseProject.API
 {
@@ -46,6 +47,8 @@ namespace BaseProject.API
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseOptions();
 
             app.UseEndpoints(endpoints =>
             {
