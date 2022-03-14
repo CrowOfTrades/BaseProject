@@ -10,7 +10,7 @@ namespace BaseProject.Repository
     public abstract class BaseRepositoryJson<T> where T : BaseEntity
     {
         internal string CACHE_KEY;
-        internal string BASE_PATH = Environment.CurrentDirectory;
+        internal string BASE_PATH = $"{Environment.CurrentDirectory}/JsonRepository";
 
         internal IList<T> Get()
         {
@@ -49,6 +49,9 @@ namespace BaseProject.Repository
             var path = $"{BASE_PATH}/{CACHE_KEY}.json";
 
             string json = JsonConvert.SerializeObject(list, Formatting.Indented);
+
+            FileInfo file = new FileInfo(path);
+            file.Directory.Create();
             File.WriteAllText(path, json);
         }
     }
